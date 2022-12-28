@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mi nombre es Emiro</h1>
+    <script>
+      let cadena = "Mi nombre es Emiro Muñoz Rojas y mi mamá me mima, mamá mima a Emiro";
+      //solicita patron y banderas, las banderas son lineas que me van a permitir modificar mi expresion regular
+      //si no tenemos la bandera g, en la primer coincidencia se va a detener, justo en el inicio, y si hubieran mas coincidencias las ignorara y se quedara con la primera
+
+      //la bandera g le dice que busque todas las coincidencias
+      //la i significa que ignora entre mayusculas y minusculas y g significa que no solamente se quedara con la primer coincidencia, las buscara todas
+
+      let expReg = new RegExp("Emiro", "ig");
+
+      //esta es otra forma
+      let expReg2 = /emiro/ig;
+
+      //tenemos una bandera con i que ignora mayusculas
+
+      //ig nos lleva al final, nos dice la ultima palabra que encontro, ig la ultima palabra que encontro 
+
+      //para hacer que js valide la expresion y que la encuentre en la cadena de texto tenemos varios metodos, pero hay dos en particular
+
+      //comprobaremos que la expresion regular exista dentro de la cadena, retorna un valor booleano
+      console.log(expReg.test(cadena));
+
+      //nos devolvera un arreglo
+      console.log(expReg.exec(cadena));
+
+
+    </script>
+  </body>
+</html>

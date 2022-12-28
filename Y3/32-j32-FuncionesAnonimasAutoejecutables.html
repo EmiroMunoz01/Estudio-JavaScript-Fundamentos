@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //como es una funcion sin nombre tenemos que encapsularla en un parentersis
+
+      //en este caso es importante agregar el punto y coma para separar el codigo
+
+      //version clasicam el primer parentesis que encierra la función, y el segundo que la ejecuta
+      (function () {
+        console.log("Mi primer IIFE");
+      })();
+
+      //esto es una función anonima, estamos pasando parametros
+      //lo que estamos diciendo es que es una funcion anonima, que estoy pasando el objeto document en la variable d, se lo estoy asignando al primer parametro, window al segundo y console al tercero
+
+      //
+      (function (d, w, c) {
+        console.log("Mi segunda IIFE");
+        //si yo imprimo d, me pasara el documento
+        //imaginemos que haremos un plugin donde habra un carrusel de imagens, como estare tocando muchos elementos del html pues seguramente estare usando document.byID o propiedades similares, todas las selecciones que haremos en html por medio de js serán por medio del document, document, document.
+
+        //Es una forma de abreviar, porque con esta función cada vez que necesitemos document simplemente escribimos la letra d, documnt estara representado por el parametro d. Y se maneja la misma dinamica con los demas parametros
+        console.log(d);
+      })(document, window, console);
+
+      //version Crockford
+      (function () {
+        console.log("Version Crockford");
+      })();
+
+      //version unaria
+      +(function () {
+        console.log("Version unaria");
+      })();
+
+      //version facebook
+      !function (){
+        console.log("Version de Facebook");
+      }();
+
+      //lo que mas se usa es la version clasica
+      alert("Hola Emiro");
+
+      //antes de la llegada de los modulos, que nos permiten llamar archivos js dentro de otros y poder encapsular nuestro codigo a manera de metodos exportados e importados, digamos que este era un aptron muy utilizado a la hora de crear modulos en js
+
+      //ahora podemos llamar modulos ya en el navegador, node js es el js del servidor, podemos mandar a llamar archivos js dentro de js, tambien lo podemos hacer dentro del navegador web, 
+    </script>
+  </body>
+</html>
